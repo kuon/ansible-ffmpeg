@@ -1,0 +1,5 @@
+- name: Add linker paths
+  copy: dest=/etc/ld.so.conf.d/ffmpeg.conf content="/usr/lib\n/usr/local/lib\n"
+
+- name: Configure linker
+  command: ldconfig
